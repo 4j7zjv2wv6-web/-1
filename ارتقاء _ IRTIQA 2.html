@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ارتقاء | IRTIQA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{--p:#00A3A1;--p2:#007C8C;--l:#E2D6FF;--l2:#F2ECFF;--bg:#FAF8FF;--ink:#12302F;--mu:#587070;--bd:#DCD2F3;--fs:1;--g1:#00B8A9;--g2:#7C5CFF;--ok:#1E8F5A;--wa:#B7791F;--er:#C2413B;color-scheme:light;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:500 15px/1.7 Tajawal,"Segoe UI",Tahoma,sans-serif}
+header{background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:5;padding:8px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px;color:var(--p)}.logo i{font-style:normal;background:var(--p);color:#fff;width:34px;height:34px;border-radius:11px 11px 11px 3px;display:grid;place-items:center}
+.logo small{display:block;font-size:11px;color:var(--mu);font-weight:500;line-height:1}
+nav{display:flex;gap:4px;margin-inline-start:auto;overflow-x:auto}nav button{border:0;background:none;padding:8px 14px;border-radius:10px;font:inherit;color:var(--mu);cursor:pointer}
+nav button.on{background:var(--l);color:var(--p2);font-weight:700}
+main{max-width:1060px;margin:auto;padding:20px 16px 60px}main,header{zoom:var(--fs)}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:18px;margin:0 0 10px}h3{font-size:16px;margin:0 0 6px}
+.card{background:#fff;border:1px solid var(--bd);border-radius:18px;padding:16px;box-shadow:0 2px 10px rgba(14,90,92,.05)}
+.g{display:grid;gap:14px}.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.g5{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.hero{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border-radius:22px;padding:22px;margin-bottom:16px}.hero p{margin:2px 0;opacity:.9}
+.stat{background:var(--l2);border-radius:14px;padding:12px}.stat b{font-size:22px;color:var(--p);display:block}
+.svc{cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:transform .15s}.svc:hover{transform:translateY(-2px)}.svc .ic{font-size:26px;width:48px;height:48px;border-radius:14px;background:var(--l);display:grid;place-items:center}
+.svc.star{border:2px solid var(--p)}
+button.b,a.b{background:var(--p);color:#fff;border:0;border-radius:11px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer}
+button.s{background:var(--l);color:var(--p2);border:0;border-radius:11px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer}
+button.d{background:#fff;color:var(--er);border:1px solid #efc4c1;border-radius:9px;padding:4px 10px;font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #9b86d6;outline-offset:2px}
+input,select,textarea{width:100%;border:1px solid var(--bd);border-radius:10px;padding:9px 11px;font:inherit;background:#fff;color:var(--ink)}
+label{display:block;font-size:13px;color:var(--mu);margin:8px 0 2px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{flex:0 0 auto}.row .f{flex:1 1 150px}
+.bar{height:9px;background:var(--l);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--p);border-radius:9px}
+.tag{display:inline-block;font-size:12px;padding:1px 10px;border-radius:99px;background:var(--l);color:var(--p2)}
+.t-ok{background:#DDF3E8;color:var(--ok)}.t-wa{background:#FCEFD3;color:var(--wa)}.t-er{background:#FADDDB;color:var(--er)}
+.tabs{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap}.tabs button{border:1px solid var(--bd);background:#fff;border-radius:99px;padding:5px 14px;font:inherit;cursor:pointer}.tabs button.on{background:var(--p);color:#fff;border-color:var(--p)}
+.note{background:#FFF8E6;border:1px solid #F2DFA7;border-radius:12px;padding:9px 12px;font-size:13px;margin:8px 0}
+.empty{text-align:center;color:var(--mu);padding:22px}.item{border-top:1px solid var(--bd);padding:10px 0}.item:first-child{border-top:0}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid var(--bd);padding:7px 9px;text-align:start;vertical-align:top}th{background:var(--l2)}
+.tw{overflow-x:auto}.back{margin-bottom:10px}#toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;display:none;z-index:9}
+.grid7{display:grid;grid-template-columns:repeat(7,minmax(110px,1fr));gap:6px;min-width:780px}.grid7>div{background:var(--l2);border-radius:10px;padding:6px;min-height:80px;font-size:12px}
+.opt{display:block;width:100%;text-align:start;margin:5px 0;border:1px solid var(--bd);background:#fff;border-radius:10px;padding:9px;font:inherit;cursor:pointer}.opt.ok{background:#DDF3E8;border-color:var(--ok)}.opt.no{background:#FADDDB;border-color:var(--er)}
+.dots{display:flex;gap:6px;align-items:flex-end;height:80px}.dots i{flex:1;background:var(--p);border-radius:6px 6px 0 0;min-height:4px;font-style:normal;color:#fff;font-size:11px;text-align:center}
+@media print{header,.noprint,#toast{display:none!important}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><div class="logo"><i>ا</i><div>ارتقاء | IRTIQA<small>من أول درس، إلى أفضل إنجاز</small></div></div>
+<nav id="nav"></nav><button class="s" id="lg" data-a="lang">English</button></header><main id="app"></main><div id="toast"></div>
+<script>
+const K='namaa_v1',$=s=>document.querySelector(s);
+let S={name:'',grade:'',stage:'',lang:'ar',fs:1,theme:'bright',focus:0,tasks:[],exams:[],classes:[],teams:[],lessons:[],results:[],reports:[],log:[],remind:true,demo:false};
+try{const r=localStorage.getItem(K);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){toast('تعذّر الحفظ في هذا المتصفح؛ البيانات مؤقتة.')}};
+const uid=()=>Math.random().toString(36).slice(2,9);const genCode=()=>Math.random().toString(36).slice(2,8).toUpperCase();
+const pad=n=>String(n).padStart(2,'0'),iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const TD=iso(new Date()),addD=(s,n)=>{const d=new Date(s+'T12:00');d.setDate(d.getDate()+n);return iso(d)};
+const dd=(a,b)=>Math.round((new Date(a+'T12:00')-new Date(b+'T12:00'))/864e5);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const DAYS=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const fmt=s=>new Date(s+'T12:00').toLocaleDateString('ar-SA',{weekday:'long',day:'numeric',month:'long'});
+function toast(m){const t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display='none',2600)}
+function log(m){S.log.unshift({d:TD,t:new Date().toLocaleTimeString('ar',{hour:'2-digit',minute:'2-digit'}),m});S.log=S.log.slice(0,40)}
+let V='home',sub={},UI={};
+const NAV=[['home','الرئيسية'],['services','الخدمات'],['progress','الإنجازات'],['settings','الإعدادات']];
+const SV={team:['👥','فريق','للمشاريع الجماعية: قسّمي المهام بعدالة وتابعي الإنجاز.'],understand:['💡','افهم','لخّصي الدرس واحصلي على أسئلة وشرح مبسّط.'],fix:['📌','ثبّت','جداول مراجعة واختبارات قصيرة تكشف نقاط ضعفك.'],plan:['🗓️','خطّتي','جدولك واختباراتك وواجباتك وتذكيراتك في مكان واحد.'],master:['✅','أتقن','راجعي مشروعك وفق متطلباته قبل التسليم.']};
+function go(v){V=v;UI={};window.scrollTo(0,0);R()}
+const tasksAll=()=>S.tasks.concat(S.teams.flatMap(t=>t.tasks.map(x=>({...x,title:x.title+' ('+t.name+')',done:x.st==='مكتملة',due:x.due,team:1}))));
+const late=t=>!t.done&&t.due<TD;
+const stOf=x=>x.st!=='مكتملة'&&x.due<TD?'متأخرة':x.st;
+const pct=t=>t.tasks.length?Math.round(t.tasks.filter(x=>x.st==='مكتملة').length/t.tasks.length*100):0;
+function R(){
+ $('#nav').innerHTML=NAV.map(([k,n])=>`<button class="${(V===k||(k==='services'&&SV[V]))?'on':''}" data-a="go" data-v="${k}">${n}</button>`).join('');
+ $('#lg').textContent=S.lang==='en'?'العربية':'English';const f=S.name?{home,services,progress,settings,team,understand,fix,plan,master}[V]:onb;$('#app').innerHTML=f();applyLang();applyTheme();
+}
+const back=()=>`<button class="s back" data-a="go" data-v="services">‹ كل الخدمات</button>`;
+const bar=p=>`<div class="bar"><i style="width:${p}%"></i></div>`;
+const hdr=k=>`${back()}<h1>${SV[k][0]} <span>${SV[k][1]}</span></h1><p style="color:var(--mu);margin:0 0 12px">${SV[k][2]}</p>`;
+const subj=()=>['الرياضيات','العلوم','اللغة العربية','اللغة الإنجليزية','الاجتماعيات','الحاسب'].map(x=>`<option>${x}</option>`).join('');
+const stt=s=>`<span class="tag ${{'مكتملة':'t-ok','متأخرة':'t-er','قيد التنفيذ':'t-wa','مكتمل':'t-ok','ناقص':'t-er','يحتاج إلى تحسين':'t-wa'}[s]||''}">${s}</span>`;
+
+/* ---------- Home ---------- */
+function home(){
+ const all=tasksAll(),today=all.filter(t=>!t.done&&t.due===TD),lt=all.filter(late);
+ const ev=S.exams.map(e=>({n:'اختبار '+e.subject,d:e.date})).concat(all.filter(t=>!t.done).map(t=>({n:t.title,d:t.due}))).filter(e=>e.d>=TD).sort((a,b)=>a.d.localeCompare(b.d))[0];
+ const wk=all.filter(t=>t.due>=addD(TD,-6)&&t.due<=addD(TD,6)),wp=wk.length?Math.round(wk.filter(t=>t.done).length/wk.length*100):0;
+ const next=all.filter(t=>!t.done).sort((a,b)=>(late(b)-late(a))||a.due.localeCompare(b.due))[0];
+ const dn=S.log.filter(l=>l.d===TD);
+ return `<div class="hero"><p>${fmt(TD)}</p><h1>أهلًا ${esc(S.name||'بك')}${S.grade?' — '+esc(S.grade):''}${S.stage?' · '+esc(S.stage):''} 👋</h1><p>معكِ تنمو المعرفة، تزدهر الأحلام 🌱</p><p>من أول درس، إلى أفضل إنجاز.</p></div>
+ ${!S.name&&!S.tasks.length&&!S.teams.length?`<div class="card note noprint" style="margin-bottom:14px">التطبيق فارغ الآن. أضيفي اسمك من <a href="#" data-a="go" data-v="settings">الإعدادات</a>، أو <button class="s" data-a="demo">حمّلي بيانات تجريبية للعرض</button></div>`:''}
+ <div class="g g2" style="margin-bottom:16px">
+  <div class="card"><div class="row"><div class="stat f"><b>${today.length}</b>مهام اليوم</div><div class="stat f"><b>${lt.length}</b>مهام متأخرة</div><div class="stat f"><b>${wp}%</b>إنجاز الأسبوع</div></div>${bar(wp)}
+   <p style="margin:10px 0 0"><b>الأقرب:</b> ${ev?esc(ev.n)+' — '+fmt(ev.d)+' (بعد '+dd(ev.d,TD)+' يوم)':'لا توجد مواعيد قادمة.'}</p></div>
+  <div class="card"><h3>خطوتك التالية</h3>${next?`<p style="margin:0 0 8px">${late(next)?'⚠️ ':''}<b>${esc(next.title)}</b><br><span style="color:var(--mu)">التسليم ${fmt(next.due)}</span></p>${next.team?'':`<button class="b" data-a="done" data-id="${next.id}">تم إنجازها ✓</button>`}`:`<p class="empty" style="padding:6px">لا مهام معلّقة. أضيفي واجبًا من «خطّتي».</p>`}</div></div>
+ <h2>الخدمات</h2><div class="g g5">${Object.entries(SV).map(([k,v])=>`<div class="card svc ${k==='master'?'star':''}" data-a="go" data-v="${k}" tabindex="0" role="button"><div class="ic">${v[0]}</div><h3>${v[1]}</h3><span style="color:var(--mu);font-size:13px">${v[2]}</span><button class="${k==='master'?'b':'s'}" style="margin-top:auto">افتحي ${v[1]}</button></div>`).join('')}</div>
+ <div class="card noprint" style="margin-top:16px"><div class="row"><div class="f"><h3>مؤقّت التركيز</h3><span style="color:var(--mu)">25 دقيقة مذاكرة بلا مقاطعة · جلسات مكتملة: ${S.focus||0}</span></div><b id="tm" style="font-size:28px;color:var(--p)">${mmss(TM.left)}</b><button class="b" data-a="tstart">ابدئي</button><button class="s" data-a="tpause">إيقاف</button><button class="s" data-a="treset">إعادة</button></div></div>
+ <h2 style="margin-top:18px">ماذا أنجزتِ اليوم؟</h2><div class="card">${dn.length?dn.map(l=>`<div class="item">✔ ${esc(l.m)} <span style="color:var(--mu)">${l.t}</span></div>`).join(''):'<div class="empty">لم يُسجَّل إنجاز اليوم بعد. أنهي مهمة أو اختبارًا قصيرًا وسيظهر هنا.</div>'}</div>`}
+function services(){return `<h1>الخدمات</h1><div class="g g5">${Object.entries(SV).map(([k,v])=>`<div class="card svc" data-a="go" data-v="${k}"><div class="ic">${v[0]}</div><h3>${v[1]}</h3><span style="color:var(--mu);font-size:13px">${v[2]}</span></div>`).join('')}</div>`}
+
+/* ---------- Team ---------- */
+function team(){
+ if(sub.team){const t=S.teams.find(x=>x.id===sub.team);if(t)return teamDet(t);sub.team=0}
+ return hdr('team')+`<div class="row noprint"><button class="b" data-a="show" data-k="tnew">إنشاء فريق جديد</button><button class="s" data-a="show" data-k="tjoin">الانضمام إلى فريق</button></div>
+ ${UI.tjoin?`<div class="card" style="margin:10px 0"><label>رمز الفريق</label><div class="row"><input id="jc" class="f" placeholder="مثال: AB12CD"><button class="b" data-a="join">انضمام</button></div></div>`:''}
+ ${UI.tnew?`<div class="card" style="margin:10px 0"><h3>مشروع جماعي جديد</h3><div class="row"><div class="f"><label>اسم المشروع</label><input id="tn"></div><div class="f"><label>المادة</label><select id="ts">${subj()}</select></div><div class="f"><label>موعد التسليم</label><input id="td" type="date" min="${TD}"></div><div class="f"><label>رمز الفريق (اختاري رمزًا أو اتركي المقترح)</label><input id="tcode" value="${genCode()}" maxlength="10"></div></div>
+ <label>وصف المشروع وموضوعه</label><textarea id="tdesc" rows="2"></textarea><label>تعليمات المعلمة</label><textarea id="ti" rows="2"></textarea>
+ <label>أسماء العضوات (اسم في كل سطر، ويُحسب العدد تلقائيًا؛ ويمكن كتابة الدور المفضّل بعد شرطة: سارة - تصميم)</label><textarea id="tm" rows="4"></textarea>
+ <label>المخرجات المطلوبة (افصلي بفاصلة)</label><input id="to" value="عرض تقديمي, تقرير"><div class="row" style="margin-top:10px"><button class="b" data-a="mkteam">إنشاء المشروع</button></div></div>`:''}
+ <h2 style="margin-top:16px">فرقي</h2>${S.teams.length?S.teams.map(t=>{const od=t.tasks.filter(x=>stOf(x)==='متأخرة').length;return `<div class="card" style="margin-bottom:10px"><div class="row"><h3 class="f">${esc(t.name)} <span class="tag">${esc(t.subject)}</span> <span class="tag t-wa">الرمز: ${esc(t.code||'—')}</span></h3><button class="s" data-a="opent" data-id="${t.id}">فتح المشروع</button></div>${bar(pct(t))}<div style="margin-top:6px;color:var(--mu)">الإنجاز ${pct(t)}% · التسليم ${fmt(t.due)} · العضوات: ${t.members.map(m=>esc(m.n)).join('، ')} ${od?`<span class="tag t-er">${od} متأخرة</span>`:''}</div></div>`}).join(''):'<div class="card empty">لا توجد فرق بعد. اضغطي «إنشاء فريق جديد» لبدء مشروعك الأول.</div>'}`}
+function teamDet(t){
+ const p=t.prop;
+ return `<button class="s back" data-a="clr">‹ كل الفرق</button><h1>${esc(t.name)}</h1><p><span class="tag t-wa">رمز الفريق: ${esc(t.code||'—')}</span> شاركيه مع زميلاتك للانضمام</p><p style="color:var(--mu)">${esc(t.desc||'')} ${t.instr?'— تعليمات المعلمة: '+esc(t.instr):''}</p>
+ <div class="card">${bar(pct(t))}<p style="margin:6px 0">إنجاز المشروع <b>${pct(t)}%</b> · التسليم ${fmt(t.due)} · غير المكتملة: ${t.tasks.filter(x=>x.st!=='مكتملة').length}</p>
+ <div class="row noprint"><button class="b" data-a="split" data-id="${t.id}">قسّمي المهام بذكاء</button><button class="s" data-a="chk" data-id="${t.id}">افحص اكتمال المشروع</button><button class="s" data-a="toMaster" data-id="${t.id}">انقلي المتطلبات إلى «أتقن»</button></div></div>
+ ${p?`<div class="card" style="margin-top:12px;border-color:var(--p)"><h3>اقتراح التوزيع (تجريبي — قائم على قواعد محلية لا ذكاء اصطناعي)</h3><p class="note">عدّلي المسؤولة والموعد، ثم اعتمدي. لن يُطبَّق شيء قبل موافقتك.</p>
+ <div class="tw"><table><tr><th>المهمة</th><th>المسؤولة</th><th>الموعد</th><th>تعتمد على</th></tr>${p.map((x,i)=>`<tr><td>${esc(x.title)}</td><td><select data-pi="${i}" data-f="who">${t.members.map(m=>`<option ${m.n===x.who?'selected':''}>${esc(m.n)}</option>`).join('')}</select></td><td><input type="date" data-pi="${i}" data-f="due" value="${x.due}" max="${t.due}"></td><td>${x.dep?esc(x.dep):'—'}</td></tr>`).join('')}</table></div>
+ <div class="row" style="margin-top:8px"><button class="b" data-a="approve" data-id="${t.id}">اعتماد التوزيع</button><button class="s" data-a="dismiss" data-id="${t.id}">إلغاء</button></div></div>`:''}
+ ${UI.chk?`<div class="card" style="margin-top:12px"><h3>نتيجة فحص الاكتمال</h3>${UI.chk}</div>`:''}
+ <h2 style="margin-top:16px">لوحة المتابعة</h2>${t.tasks.length?`<div class="card tw"><table><tr><th>المهمة</th><th>المسؤولة</th><th>الموعد</th><th>الحالة</th><th>ملاحظات / ملف</th><th></th></tr>${t.tasks.map(x=>`<tr><td>${esc(x.title)}</td><td>${esc(x.who)}</td><td>${x.due}</td><td>${stt(stOf(x))}<br><select data-tt="${t.id}" data-id="${x.id}" data-f="st">${['لم تبدأ','قيد التنفيذ','مكتملة'].map(s=>`<option ${x.st===s?'selected':''}>${s}</option>`).join('')}</select></td><td><input data-tt="${t.id}" data-id="${x.id}" data-f="note" value="${esc(x.note||'')}" placeholder="ملاحظة"><input type="file" data-tt="${t.id}" data-id="${x.id}" data-f="file">${x.file?'<small>📎 '+esc(x.file)+'</small>':''}</td><td><button class="d" data-a="deltask" data-t="${t.id}" data-id="${x.id}">حذف</button></td></tr>`).join('')}</table></div>`:'<div class="card empty">لا مهام بعد. استخدمي «قسّمي المهام بذكاء» لاقتراح التوزيع.</div>'}
+ ${t.files&&t.files.length?`<h2 style="margin-top:16px">ملفات المشروع</h2><div class="card">${t.files.map(f=>`<div class="item">📄 ${esc(f.n)} <span class="tag">${f.d}</span></div>`).join('')}</div>`:''}
+ <div class="row" style="margin-top:14px"><button class="d" data-a="delteam" data-id="${t.id}">حذف الفريق</button></div>`}
+
+/* ---------- Understand ---------- */
+const words=s=>s.split(/\s+/).filter(Boolean);
+function parse(text){
+ const sents=text.split(/[.؟?!\n]+/).map(s=>s.trim()).filter(s=>words(s).length>=5);
+ const key=w=>words(w).map(x=>x.replace(/[،,:؛()«»"]/g,'')).filter(x=>x.length>3).sort((a,b)=>b.length-a.length)[0];
+ const items=sents.map(s=>({s,k:key(s)})).filter(i=>i.k);
+ const defs=sents.filter(s=>/(هو|هي|يعرّف|يُعرّف|تعريف|يسمى|تسمى|يُسمى|تُسمى|:)/.test(s));
+ return{sents,items,defs,words:words(text).length};
+}
+function understand(){
+ const r=UI.res;
+ return hdr('understand')+`<div class="card noprint"><div class="row"><div class="f"><label>المادة</label><select id="us">${subj()}</select></div><div class="f"><label>الصف</label><input id="ug" value="${esc(S.grade)}" placeholder="مثال: الثاني المتوسط"></div><div class="f"><label>مستوى التفصيل</label><select id="ul"><option>مختصر</option><option selected>متوسط</option><option>مفصّل</option></select></div></div>
+ <div class="row" style="margin-top:10px"><label class="s" style="margin:0;cursor:pointer;padding:8px 14px;border-radius:11px">📷 التقطي صورة<input type="file" accept="image/*" capture="environment" hidden data-a="up" data-t="صورة"></label><label class="s" style="margin:0;cursor:pointer;padding:8px 14px;border-radius:11px">🖼️ ارفعي صورة<input type="file" accept="image/*" hidden data-a="up" data-t="صورة"></label></div>
+ ${UI.up?`<div class="note">${UI.up}</div>`:''}
+ <label>أو الصقي نص الدرس هنا</label><textarea id="ut" rows="7" placeholder="الصقي نص الدرس...">${esc(UI.txt||'')}</textarea><div class="row" style="margin-top:10px"><button class="b" data-a="analyze">ابدأ التحليل</button><button class="s" data-a="sample">أدخلي درسًا تجريبيًا</button></div></div>
+ ${r?understandRes(r):''}`}
+function understandRes(r){
+ const T=UI.tab||0,d=parse(r.text),lv=r.lv,n=lv==='مختصر'?2:lv==='مفصّل'?8:5;
+ const tabs=['ملخص الدرس','أسئلة الدرس','شرح مبسط','مراجعة سريعة'];
+ let c='';
+ if(T===0)c=`<h3>ملخص قصير</h3><p>${esc(d.sents.slice(0,2).join('. '))}.</p><h3>ملخص مفصّل</h3><div id="sumtxt" contenteditable="true" style="border:1px dashed var(--bd);border-radius:10px;padding:8px">${esc(d.sents.slice(0,n+3).join('. '))}.</div><small>يمكنك تعديل الملخص مباشرة.</small><h3 style="margin-top:10px">أهم الأفكار (الأطول معلومةً)</h3><ul>${d.sents.slice().sort((a,b)=>b.length-a.length).slice(0,n).map(s=>`<li>${esc(s)}</li>`).join('')}</ul><h3>التعريفات والمصطلحات</h3>${d.defs.length?`<ul>${d.defs.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`:'<p style="color:var(--mu)">لم تُرصد جمل تعريف واضحة.</p>'}<p class="note">النقاط الأطول والتعريفات قد تكون مهمة للمراجعة، لكن لا يمكن معرفة أسئلة الاختبار الفعلية.</p>`;
+ if(T===1)c=d.items.length?d.items.map((q,i)=>`<div class="item"><b>${i+1}. أكملي الفراغ:</b> ${esc(q.s.replace(q.k,'_____'))}<details><summary>الإجابة</summary>${esc(q.k)}</details></div><div class="item"><b>صح أم خطأ؟</b> ${esc(i%2?q.s.replace(q.k,d.items[(i+1)%d.items.length].k):q.s)}<details><summary>الإجابة</summary>${i%2?'خطأ — الصحيحة: '+esc(q.s):'صح'}</details></div>`).join('')+`<div class="item"><b>سؤال تفكيري:</b> اشرحي بأسلوبك فكرة: «${esc(d.sents[0]||'')}»</div>`:'<div class="empty">النص قصير جدًا لتوليد أسئلة.</div>';
+ if(T===2)c=`<p>لفهم الدرس خطوة بخطوة${S.grade?' (لمستوى '+esc(r.grade||S.grade)+')':''}:</p><ol>${d.sents.slice(0,n+1).map(s=>`<li>${esc(s)}<br><small style="color:var(--mu)">اسألي نفسك: ما الفكرة الأساسية هنا؟ وهل أستطيع إعطاء مثال من حياتي؟</small></li>`).join('')}</ol><p class="note">هذا تفكيك آلي للنص إلى خطوات؛ شرح الأمثلة الحقيقية يحتاج خدمة ذكاء اصطناعي.</p>`;
+ if(T===3)c=`<div class="g g2">${d.items.slice(0,6).map(q=>`<details class="card"><summary><b>${esc(q.s.replace(q.k,'_____'))}</b></summary><p>${esc(q.k)}</p></details>`).join('')}</div><h3 style="margin-top:12px">للحفظ</h3><ul>${d.items.slice(0,6).map(q=>`<li>${esc(q.k)}</li>`).join('')}</ul>`;
+ return `<div class="card" style="margin-top:14px"><div class="note"><b>تحليل تجريبي محلي:</b> يعتمد على قواعد بسيطة على النص المُدخل، وليس ذكاءً اصطناعيًا حقيقيًا. للتفعيل الفعلي يلزم خادم يستدعي خدمة ذكاء اصطناعي بمفتاح API محفوظ بأمان خارج الواجهة. ${d.words} كلمة جرى تحليلها.</div>
+ <div class="tabs">${tabs.map((t,i)=>`<button class="${T===i?'on':''}" data-a="tab" data-i="${i}">${t}</button>`).join('')}</div>${c}
+ <div class="row noprint" style="margin-top:12px"><button class="b" data-a="toFix">انقليها إلى «ثبّت»</button><button class="s" data-a="savel">حفظ في المادة</button><button class="s" data-a="copy">نسخ</button><button class="s" onclick="window.print()">طباعة</button></div></div>`}
+
+/* ---------- Fix ---------- */
+function fix(){
+ const q=UI.q;
+ return hdr('fix')+`<div class="tabs">${['الاختبارات القصيرة','الجداول','النتائج السابقة'].map((t,i)=>`<button class="${(UI.ft||0)===i?'on':''}" data-a="ft" data-i="${i}">${t}</button>`).join('')}</div>`+
+ (!S.lessons.length?`<div class="card empty">لا توجد دروس محفوظة. أضيفي درسًا من «افهم» ثم انقليه إلى «ثبّت».<br><button class="b" style="margin-top:8px" data-a="go" data-v="understand">اذهبي إلى افهم</button></div>`:
+ (UI.ft||0)===0?(q?quiz(q):`<div class="card"><div class="row"><div class="f"><label>الدرس</label><select id="ql">${S.lessons.map(l=>`<option value="${l.id}">${esc(l.subject)} — ${esc(l.title)}</option>`).join('')}</select></div><div class="f"><label>عدد الأسئلة</label><input id="qn" type="number" min="1" max="60" value="10"></div><div class="f"><label>الصعوبة</label><select id="qd"><option>سهل</option><option>متوسط</option><option>متقدم</option></select></div><div class="f"><label>الوضع</label><select id="qm"><option>تدريب</option><option>اختبار</option></select></div></div><button class="b" style="margin-top:10px" data-a="startq">ابدئي الاختبار</button> <button class="s" style="margin-top:10px" data-a="startai">أسئلة شاملة بالذكاء الاصطناعي</button><p style="color:var(--mu);font-size:13px">الاختبار العادي: اختيار من متعدد وصح/خطأ تغطي جمل الدرس كلها (حتى 60 سؤالًا). الزر الآخر يولّد أسئلة متنوعة (فهم وتطبيق وتفكير) تغطي المنهج المدخل من أوله لآخره، وتحتاج موافقة الذكاء الاصطناعي.</p></div>`)
+ :(UI.ft===1?tables():hist()));
+}
+function quiz(q){
+ if(q.done){const sc=q.a.filter((a,i)=>a===q.qs[i].c).length,wk=q.qs.filter((x,i)=>q.a[i]!==x.c);
+ return `<div class="card"><h2>النتيجة: ${sc} / ${q.qs.length} (${Math.round(sc/q.qs.length*100)}%)</h2>${q.qs.map((x,i)=>`<div class="item">${q.a[i]===x.c?'✅':'❌'} ${esc(x.q)}<br><small>الصحيحة: <b>${esc(x.o[x.c])}</b>${q.a[i]!==x.c?` — إجابتك: ${esc(x.o[q.a[i]]||'—')}. السبب: ${esc(x.why)}`:''}</small></div>`).join('')}
+ ${wk.length?`<p><b>مهارات تحتاج مراجعة:</b> ${wk.map(x=>esc(x.k)).join('، ')}</p><button class="b" data-a="retry">أسئلة إضافية على مواضع الخطأ</button>`:'<p>ممتاز! لا أخطاء.</p>'} <button class="s" data-a="endq">إنهاء</button></div>`}
+ const x=q.qs[q.i],ans=q.a[q.i],pr=q.mode==='تدريب'&&ans!==undefined;
+ return `<div class="card"><div class="row"><b class="f">سؤال ${q.i+1} من ${q.qs.length}</b><span class="tag">${q.mode}</span></div>${bar(q.i/q.qs.length*100)}<h3 style="margin-top:10px">${esc(x.q)}</h3>${x.o.map((o,j)=>`<button class="opt ${pr?(j===x.c?'ok':j===ans?'no':''):(ans===j?'ok':'')}" data-a="ans" data-j="${j}">${esc(o)}</button>`).join('')}
+ ${pr?`<p class="note">${ans===x.c?'إجابة صحيحة 👏':'الصحيحة: '+esc(x.o[x.c])+'. '+esc(x.why)}</p>`:''}<button class="b" data-a="nextq" ${ans===undefined?'disabled style="opacity:.5"':''}>${q.i+1===q.qs.length?'إنهاء وتصحيح':'التالي'}</button></div>`}
+function makeQs(l,n,lv,focus){
+ const d=parse(l.text),pool=d.items,ks=[...new Set(pool.map(i=>i.k))];
+ let src=focus&&focus.length?pool.filter(i=>focus.includes(i.k)):pool;if(!src.length)src=pool;
+ src=src.slice().sort(()=>Math.random()-.5);const tfq=src.map((i,j)=>{const t=j%2===0,o2=ks.filter(k=>k!==i.k),w=o2[Math.floor(Math.random()*o2.length)],ok=t||!w;return{q:'صح أم خطأ: '+(ok?i.s:i.s.replace(i.k,w)),o:['صح','خطأ'],c:ok?0:1,k:i.k,why:'الجملة الصحيحة في الدرس: «'+i.s+'»'}});
+ const mq=src.map(i=>{const dist=ks.filter(k=>k!==i.k).sort(()=>Math.random()-.5).slice(0,lv==='سهل'?2:3);const o=[i.k,...dist].sort(()=>Math.random()-.5);
+ return{q:'أكملي: '+i.s.replace(i.k,'_____'),o,c:o.indexOf(i.k),k:i.k,why:'الجملة الأصلية في الدرس: «'+i.s+'»'}});return mq.concat(tfq).sort(()=>Math.random()-.5).slice(0,n);
+}
+function tables(){
+ const l=S.lessons[UI.tl||0],d=parse(l.text);
+ return `<div class="card"><label>الدرس</label><select id="tl" data-a="tl">${S.lessons.map((x,i)=>`<option value="${i}" ${i==(UI.tl||0)?'selected':''}>${esc(x.title)}</option>`).join('')}</select>
+ <h3 style="margin-top:12px">جدول المصطلحات والتعريفات</h3>${d.defs.length?`<div class="tw"><table id="tb"><tr><th>المفهوم</th><th>التعريف / الجملة</th></tr>${d.defs.map(s=>{const m=s.split(/\s(هو|هي|يسمى|تسمى|يعرّف|:)/)[0];return `<tr><td>${esc(m.slice(0,30))}</td><td>${esc(s)}</td></tr>`}).join('')}</table></div>`:'<div class="empty">لم تُرصد تعريفات.</div>'}
+ <h3 style="margin-top:12px">جدول المراجعة السريعة</h3><div class="tw"><table><tr><th>الفكرة</th><th>الكلمة المفتاحية</th></tr>${d.items.slice(0,8).map(i=>`<tr><td>${esc(i.s)}</td><td>${esc(i.k)}</td></tr>`).join('')}</table></div>
+ <div class="row noprint" style="margin-top:8px"><button class="s" data-a="copytb">نسخ</button><button class="s" onclick="window.print()">طباعة</button></div><small style="color:var(--mu)">الجداول تُستخرج بقواعد محلية؛ جداول المقارنة والأسباب تحتاج ذكاءً اصطناعيًا متصلًا.</small></div>`}
+function hist(){
+ const r=S.results;if(!r.length)return '<div class="card empty">لا نتائج بعد. أنهي اختبارًا قصيرًا ليظهر تقدمك هنا.</div>';
+ return `<div class="card"><h3>تطور النتائج</h3><div class="dots">${r.slice(0,10).reverse().map(x=>`<i style="height:${Math.max(x.p,5)}%">${x.p}</i>`).join('')}</div>${r.map(x=>`<div class="item">${x.d} — ${esc(x.title)} (${x.mode}): <b>${x.p}%</b> ${x.weak.length?'<br><small>للمراجعة: '+x.weak.map(esc).join('، ')+'</small>':''}</div>`).join('')}</div>`}
+
+/* ---------- Plan ---------- */
+function plan(){
+ const pt=UI.pt||0,all=tasksAll();
+ const days=[...Array(7)].map((_,i)=>addD(TD,i));
+ const body=[
+ `<div class="card"><h3>إضافة حصة</h3><div class="row"><div class="f"><label>المادة</label><select id="cs">${subj()}</select></div><div class="f"><label>اليوم</label><select id="cd">${DAYS.slice(0,5).map((d,i)=>`<option value="${i}">${d}</option>`).join('')}</select></div><div class="f"><label>الحصة</label><select id="cp">${PER.map((p,i)=>`<option value="${i}">${p}</option>`).join('')}</select></div><div class="f"><label>المعلمة (اختياري)</label><input id="ct"></div></div><button class="b" style="margin-top:8px" data-a="addcls">${UI.edit?'حفظ التعديل':'إضافة'}</button></div>
+ ${schedTable()}<div class="card tw" hidden><div class="grid7">${DAYS.map((d,i)=>`<div><b>${d}</b>${S.classes.filter(c=>c.day==i).map(c=>`<div style="margin-top:4px;background:#fff;border-radius:8px;padding:4px">${esc(c.subject)}<br>${c.s}–${c.e} <button class="d" data-a="delcls" data-id="${c.id}">×</button></div>`).join('')}${S.plan?S.plan.filter(p=>p.day==i&&p.ok).map(p=>`<div style="margin-top:4px;background:var(--l);border-radius:8px;padding:4px">📖 ${esc(p.t)}<br>${p.s}–${p.e}</div>`).join(''):''}</div>`).join('')}</div>${!S.classes.length?'<div class="empty">أضيفي حصصك لتظهر هنا.</div>':''}</div>`,
+ `<div class="card"><h3>إضافة اختبار</h3><div class="row"><div class="f"><label>المادة</label><select id="es">${subj()}</select></div><div class="f"><label>الوحدة / الدروس</label><input id="eu"></div><div class="f"><label>التاريخ</label><input id="ed" type="date" min="${TD}"></div><div class="f"><label>الوقت</label><input id="et" type="time"></div><div class="f"><label>الاستعداد</label><select id="er"><option value="1">منخفض</option><option value="2" selected>متوسط</option><option value="3">جيد</option></select></div></div><label>ملاحظات</label><input id="en"><button class="b" style="margin-top:8px" data-a="addexam">إضافة الاختبار</button></div>
+ <div class="card" style="margin-top:12px">${S.exams.length?S.exams.slice().sort((a,b)=>a.date.localeCompare(b.date)).map(e=>`<div class="item row"><div class="f"><b>${esc(e.subject)}</b> — ${esc(e.unit||'')}<br><small>${fmt(e.date)} ${e.time||''} · الاستعداد ${['','منخفض','متوسط','جيد'][e.ready]}</small></div><button class="d" data-a="delexam" data-id="${e.id}">حذف</button></div>`).join(''):'<div class="empty">لا اختبارات مسجّلة.</div>'}</div>`,
+ `<div class="card"><h3>إضافة واجب أو مشروع</h3><div class="row"><div class="f"><label>المهمة</label><input id="wt"></div><div class="f"><label>النوع</label><select id="wk"><option>واجب</option><option>مشروع</option><option>عرض تقديمي</option><option>بحث</option><option>أخرى</option></select></div><div class="f"><label>المادة</label><select id="ws">${subj()}</select></div><div class="f"><label>التسليم</label><input id="wd" type="date" min="${TD}"></div><div class="f"><label>الأولوية</label><select id="wp"><option>عالية</option><option selected>متوسطة</option><option>منخفضة</option></select></div></div><label>الوصف</label><input id="wx"><button class="b" style="margin-top:8px" data-a="addtask">إضافة</button></div>`,
+ `<div class="row noprint"><button class="b" data-a="mkplan">خطّطي أسبوعي</button><label style="margin:0">التذكيرات: ${S.remind?'مفعّلة داخل التطبيق فقط':'متوقفة'}</label></div>
+ ${S.plan&&S.plan.length?`<div class="card" style="margin:10px 0;border-color:var(--p)"><h3>جدول مذاكرة مقترح</h3><p class="note">لم يُعتمد بعد، ولا يتداخل مع حصصك أو مع بعضه.</p>${S.plan.map(p=>`<div class="item">${p.ok?'✅':'⬜'} ${DAYS[p.day]} ${p.s}–${p.e}: ${esc(p.t)}</div>`).join('')}<div class="row" style="margin-top:8px">${S.plan.some(p=>!p.ok)?'<button class="b" data-a="okplan">اعتماد الجدول</button>':'<span class="tag t-ok">معتمد</span> <button class="s" data-a="mkplan">أعيدي الاقتراح</button>'}<button class="s" data-a="noplan">حذف الاقتراح</button></div></div>`:''}
+ ${S.remind&&all.some(t=>!t.done&&t.due>=TD&&dd(t.due,TD)<=2)?`<div class="note">🔔 ${all.filter(t=>!t.done&&t.due>=TD&&dd(t.due,TD)<=2).map(t=>esc(t.title)).join('، ')} — موعدها خلال يومين. (إشعار داخل التطبيق؛ لا تصل الإشعارات بعد إغلاقه.)</div>`:''}
+ <div class="g g2"><div class="card"><h3>اليوم</h3>${tl(all.filter(t=>t.due===TD))}<h3 style="margin-top:10px">متأخرة</h3>${tl(all.filter(late))}</div><div class="card"><h3>القادمة (التقويم الموحّد)</h3>${days.slice(1).map(d=>{const ev=all.filter(t=>t.due===d).map(t=>('📝 '+esc(t.title))).concat(S.exams.filter(e=>e.date===d).map(e=>'🎯 اختبار '+esc(e.subject)));return ev.length?`<div class="item"><b>${fmt(d)}</b><br>${ev.join('<br>')}</div>`:''}).join('')||'<div class="empty">لا مواعيد خلال الأسبوع.</div>'}</div></div>`][pt];
+ return hdr('plan')+`<div class="tabs">${['الجدول الدراسي','الاختبارات','الواجبات والمشاريع','التقويم والتخطيط'].map((t,i)=>`<button class="${pt===i?'on':''}" data-a="pt" data-i="${i}">${t}</button>`).join('')}</div>`+body+(pt===2?`<div class="card" style="margin-top:12px">${S.tasks.length?S.tasks.map(t=>`<div class="item row"><div class="f">${t.done?'✅ ':''}<b>${esc(t.title)}</b> <span class="tag">${t.type}</span> <span class="tag">${t.pr}</span><br><small>${esc(t.subject)} · ${fmt(t.due)}</small></div>${t.done?'':`<button class="s" data-a="done" data-id="${t.id}">اكتملت</button>`}<button class="d" data-a="deltask2" data-id="${t.id}">حذف</button></div>`).join(''):'<div class="empty">لا واجبات بعد.</div>'}</div>`:'')}
+const PER=['الأولى','الثانية','الثالثة','الرابعة','الخامسة','السادسة','السابعة','إضافية 1','إضافية 2'];
+function schedTable(){return `<div class="card tw" style="margin-top:12px"><table><tr><th>الحصة</th>${DAYS.slice(0,5).map(d=>`<th>${d}</th>`).join('')}</tr>${PER.map((p,i)=>`<tr><td><b>${p}</b>${i>6?'<br><small>بدون وقت</small>':''}</td>${[0,1,2,3,4].map(d=>{const c=S.classes.find(x=>x.p===i&&x.day==d);return '<td>'+(c?esc(c.subject)+(c.t?'<br><small>'+esc(c.t)+'</small>':'')+' <button class="s" data-a="editcls" data-id="'+c.id+'" style="padding:1px 8px" title="تغيير">✎</button> <button class="d" data-a="delcls" data-id="'+c.id+'" title="حذف">×</button>':'')+'</td>'}).join('')}</tr>`).join('')}</table>${!S.classes.length?'<div class="empty">أضيفي حصصك لتظهر هنا.</div>':''}</div>`}
+const tl=a=>a.length?a.map(t=>`<div class="item row"><span class="f">${esc(t.title)}</span>${t.team||t.done?'':`<button class="s" data-a="done" data-id="${t.id}">✓</button>`}</div>`).join(''):'<div class="empty" style="padding:6px">لا شيء هنا.</div>';
+
+/* ---------- Master ---------- */
+function check(txt,crit){
+ const ws=words(txt),F=[];let n=0;const add=(t,st,why,fix,ex)=>F.push({id:n++,t,st,why,fix,ex});
+ crit.split('\n').map(s=>s.trim()).filter(Boolean).forEach(c=>{const ks=words(c).map(x=>x.replace(/[،.:]/g,'')).filter(x=>x.length>3),h=ks.filter(k=>txt.includes(k.slice(0,Math.max(3,k.length-1)))).length;const st=!ks.length?'يحتاج إلى تحقق':h/ks.length>=.6?'مكتمل':h?'يحتاج إلى تحسين':'ناقص';add('المتطلب: '+c,st,st==='مكتمل'?'وُجدت كلمات المتطلب في النص (فحص كلمات مفتاحية فقط).':'لم تظهر كلمات المتطلب بوضوح في النص.','أضيفي فقرة أو قسمًا يغطّي هذا المتطلب صراحةً.','مثال: ابدئي الفقرة بعنوان «'+c.slice(0,30)+'» ثم اشرحيه في 3 جمل.')});
+ if(ws.length<120)add('طول المحتوى','يحتاج إلى تحسين','عدد الكلمات '+ws.length+' فقط.','وسّعي الأفكار بأمثلة وتفاصيل.','مثال: بعد كل فكرة أضيفي «مثلًا...».');
+ const fr={};ws.filter(w=>w.length>4).forEach(w=>fr[w]=(fr[w]||0)+1);const rp=Object.entries(fr).filter(([w,c])=>c>=5).map(([w])=>w);
+ if(rp.length)add('تكرار','يحتاج إلى تحسين','تكررت كلمات: '+rp.slice(0,4).join('، ')+' خمس مرات أو أكثر.','استبدلي بعض التكرارات بمرادفات أو ضمائر.','مثال: بدل تكرار الكلمة، قولي «هذه الظاهرة».');
+ if(/ {2,}/.test(txt)||/ [،.]/.test(txt))add('تنسيق وعلامات ترقيم','يحتاج إلى تحسين','مسافات زائدة أو مسافة قبل علامة الترقيم.','احذفي المسافة الزائدة قبل الفاصلة والنقطة.','«الدرس ،» ← «الدرس،»');
+ if(!/مصدر|مصادر|مراجع|المراجع|http/.test(txt))add('المصادر والتوثيق','يحتاج إلى تحقق','لم تُرصد قائمة مصادر. لا يمكن التحقق من صحة المصادر أصلًا هنا.','أضيفي قسم «المصادر» إن كانت المعلمة تشترطه.','المصدر: عنوان الكتاب، المؤلف، السنة.');
+ if(!/\n\s*\n/.test(txt)&&ws.length>150)add('ترتيب الأفكار','يحتاج إلى تحسين','النص كتلة واحدة بلا فقرات.','قسّميه إلى فقرات: مقدمة، عرض، خاتمة.','اجعلي لكل فكرة فقرة مستقلة.');
+ add('الإملاء والنحو','يحتاج إلى تحقق','لا يوجد مدقق إملائي عربي حقيقي هنا، ولن أدّعي اكتشاف أخطاء غير مؤكدة.','اقرئي النص بصوت مسموع أو اطلبي مراجعة بشرية.','');
+ return F}
+function master(){
+ const r=UI.rep;
+ return hdr('master')+`<div class="card"><h3>1) ارفعي مشروعك</h3><div class="row"><label class="s" style="margin:0;cursor:pointer;padding:8px 14px;border-radius:11px">ارفعي مشروعك<input type="file" hidden data-a="mup" accept="image/*,.txt"></label></div>${UI.mup?`<div class="note">${UI.mup}</div>`:''}
+ <label>أو اكتبي/الصقي النص</label><textarea id="mt" rows="7">${esc(UI.mtxt||'')}</textarea>
+ <h3 style="margin-top:10px">2) المعايير</h3><div class="row"><div class="f"><label>اسم المشروع</label><input id="mn" value="${esc(UI.mn||'')}"></div><div class="f"><label>المادة</label><select id="ms">${subj()}</select></div><div class="f"><label>الصف</label><input id="mg" value="${esc(S.grade)}"></div><div class="f"><label>المستوى</label><select id="mv"><option>أساسية</option><option selected>متوسطة</option><option>دقيقة</option></select></div></div>
+ <label>تعليمات المعلمة ومعايير التقييم (اختياري، لكن إضافتها تجعل المراجعة أدق — متطلب في كل سطر)</label><textarea id="mc" rows="4" placeholder="مثال:&#10;تعريف الموضوع&#10;ثلاثة أمثلة&#10;خاتمة">${esc(UI.mc||'')}</textarea>
+ <div class="row" style="margin-top:10px"><button class="b" data-a="review">افحصي المشروع</button></div></div>
+ ${r?`<div class="card" style="margin-top:14px"><h2>تقرير المراجعة: ${esc(r.name||'مشروعي')}</h2><p class="note">تقييم تقديري مبني على فحص قواعد محلية وليس ذكاءً اصطناعيًا، ويتوقف على معايير معلمتك. لا توجد درجة نهائية.</p>
+ <p>الملخص: ${r.F.filter(f=>f.st==='مكتمل').length} مكتمل · ${r.F.filter(f=>f.st==='يحتاج إلى تحسين').length} يحتاج إلى تحسين · ${r.F.filter(f=>f.st==='ناقص').length} ناقص · ${r.F.filter(f=>f.st==='يحتاج إلى تحقق').length} يحتاج إلى تحقق</p>
+ ${['ناقص','يحتاج إلى تحسين','يحتاج إلى تحقق','مكتمل'].map(s=>r.F.filter(f=>f.st===s).map(f=>`<div class="item"><div class="row"><b class="f">${esc(f.t)}</b>${stt(s)}${s!=='مكتمل'&&f.fix?`<button class="s" data-a="help" data-id="${f.id}">ساعدني على التحسين</button>`:''}</div>${UI.hp===f.id?`<div class="note"><b>السبب:</b> ${esc(f.why)}<br><b>الإصلاح:</b> ${esc(f.fix)}<br>${f.ex?'<b>مثال:</b> '+esc(f.ex):''}</div>`:''}</div>`).join('')).join('')}
+ <h3 style="margin-top:10px">قائمة الاستعداد للتسليم</h3>${r.F.map(f=>`<label style="display:flex;gap:8px;margin:4px 0;color:var(--ink)"><input type="checkbox" style="width:auto" data-a="ck" data-id="${f.id}" ${r.ck[f.id]?'checked':''} ${f.st==='يحتاج إلى تحقق'?'':''}> ${esc(f.t)} ${f.st==='يحتاج إلى تحقق'?'<small>(لا يمكن التحقق آليًا)</small>':''}</label>`).join('')}
+ ${(()=>{const v=r.F.filter(f=>f.st!=='يحتاج إلى تحقق'),c=v.filter(f=>r.ck[f.id]).length;return `<p>اكتمال البنود المفحوصة فعليًا: <b>${v.length?Math.round(c/v.length*100):0}%</b> (${c}/${v.length}) — القرار النهائي لك.</p>`})()}
+ <div class="row noprint"><button class="s" data-a="saver">حفظ التقرير</button>${S.teams.length?`<select id="rt" style="width:auto">${S.teams.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('')}</select><button class="s" data-a="saveteam">حفظ ضمن ملفات المشروع</button>`:''}<button class="s" onclick="window.print()">طباعة</button><span style="color:var(--mu);font-size:13px">عدّلي النص أعلاه ثم اضغطي «افحصي المشروع» لمراجعة النسخة المعدلة.</span></div></div>`:''}`}
+
+/* ---------- Progress / Settings ---------- */
+function progress(){
+ const all=tasksAll(),dn=all.filter(t=>t.done),pc=all.filter(t=>t.done||t.due<TD).length;
+ const sub={};S.results.forEach(r=>{(sub[r.subject]=sub[r.subject]||[]).push(r.p)});
+ const weak=[...new Set(S.results.flatMap(r=>r.weak))].slice(0,8);
+ return `<h1>تطوري</h1>${S.demo?'<div class="note">بعض البيانات تجريبية للعرض فقط وليست نتائج حقيقية. بياناتك خاصة بك ومحفوظة على هذا الجهاز.</div>':''}
+ <div class="g g2"><div class="stat"><b>${dn.length}</b>مهام منجزة</div><div class="stat"><b>${pc?Math.round(dn.length/pc*100)+'%':'—'}</b>الالتزام بالمواعيد</div><div class="stat"><b>${S.results.length}</b>اختبارات قصيرة</div><div class="stat"><b>${S.lessons.length}</b>دروس محفوظة</div><div class="stat"><b>${S.focus||0}</b>جلسات تركيز</div></div>
+ <div class="g g2" style="margin-top:14px"><div class="card"><h3>المواد ومتوسط الاختبارات</h3>${Object.keys(sub).length?Object.entries(sub).map(([k,v])=>{const a=Math.round(v.reduce((x,y)=>x+y,0)/v.length);return `<div style="margin:8px 0">${esc(k)} <b>${a}%</b>${bar(a)}</div>`}).join(''):'<div class="empty">أنهي اختبارًا في «ثبّت».</div>'}</div>
+ <div class="card"><h3>تحتاج إلى مراجعة</h3>${weak.length?weak.map(w=>`<span class="tag t-wa">${esc(w)}</span> `).join(''):'<div class="empty">لا نقاط ضعف مسجّلة.</div>'}<h3 style="margin-top:12px">تقدم المشاريع</h3>${S.teams.length?S.teams.map(t=>`<div style="margin:6px 0">${esc(t.name)} ${pct(t)}%${bar(pct(t))}</div>`).join(''):'<small style="color:var(--mu)">لا مشاريع.</small>'}</div></div>
+ <h2 style="margin-top:16px">سجل النشاط</h2><div class="card">${S.log.length?S.log.map(l=>`<div class="item">${l.d} ${l.t} — ${esc(l.m)}</div>`).join(''):'<div class="empty">لا نشاط بعد.</div>'}</div>
+ ${S.reports.length?`<h2 style="margin-top:16px">تقارير «أتقن» المحفوظة</h2><div class="card">${S.reports.map(r=>`<div class="item">${esc(r.name)} — ${r.d}</div>`).join('')}</div>`:''}`}
+function settings(){
+ return `<h1>الإعدادات</h1><div class="card"><div class="row"><div class="f"><label>اسم الطالبة</label><input id="sn" value="${esc(S.name)}"></div><div class="f"><label>الصف</label><input id="sg" value="${esc(S.grade)}"></div><div class="f"><label>المرحلة الدراسية</label><select id="sst">${['ابتدائي','متوسط','ثانوي'].map(x=>`<option ${S.stage===x?'selected':''}>${x}</option>`).join('')}</select></div></div>
+ <label style="display:flex;gap:8px;align-items:center;color:var(--ink)"><input type="checkbox" id="sr" style="width:auto" ${S.remind?'checked':''}> تفعيل التذكيرات داخل التطبيق</label><button class="b" style="margin-top:10px" data-a="saveset">حفظ</button></div>
+ <div class="card" style="margin-top:12px"><h3>حجم الخط</h3><div class="row">${[['صغير',.9],['عادي',1],['كبير',1.15],['كبير جدًا',1.3]].map(([n,v])=>`<button class="${S.fs===v?'b':'s'}" data-a="fs" data-v="${v}">${n}</button>`).join('')}</div><h3 style="margin-top:12px">ألوان التطبيق</h3><div class="row">${Object.entries(THEMES).map(([k,t])=>`<button data-a="theme" data-v="${k}" aria-label="${t.n}" title="${t.n}" style="border:${S.theme===k?'3px solid var(--ink)':'2px solid #fff'};width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,${t.g1},${t.g2});cursor:pointer"></button>`).join('')}</div><small style="color:var(--mu)">اللون الحالي: ${(THEMES[S.theme]||THEMES.bright).n}</small></div>
+<div class="card" style="margin-top:12px"><h3>الدروس المحفوظة</h3>${S.lessons.length?S.lessons.map(l=>`<div class="item row"><span class="f">${esc(l.subject)} — ${esc(l.title)}</span><button class="d" data-a="dell" data-id="${l.id}">حذف</button></div>`).join(''):'<div class="empty">لا ملفات محفوظة.</div>'}</div>
+ <div class="card" style="margin-top:12px"><h3>اللغة والمظهر</h3><p style="color:var(--mu)">استخدمي زر اللغة أعلى الصفحة للتبديل بين العربية والإنجليزية؛ تُترجم عناوين الواجهة وأزرارها الرئيسية، أما ما تكتبينه أنتِ فيبقى كما هو.</p><h3>حدود هذا النموذج</h3><p style="color:var(--mu)">البيانات محفوظة في متصفحك فقط (localStorage) ولا تُرفع لأي خادم. مشاركة الفرق بين جهازين، والإشعارات خارج التطبيق، وقراءة الصور وPDF، والتحليل بالذكاء الاصطناعي تحتاج خادمًا وخدمات خارجية.</p><button class="d" data-a="wipe">حذف كل بياناتي</button></div>`}
+
+/* ---------- Actions ---------- */
+const val=id=>($('#'+id)||{}).value||'';
+const need=(c,m)=>{if(!c){toast(m);return false}return true};
+function demo(){
+ S.name='ريم';S.grade='الثاني المتوسط';S.demo=true;
+ S.tasks.push({id:uid(),title:'حل تمارين الكسور',type:'واجب',subject:'الرياضيات',due:TD,mins:40,pr:'عالية',done:false},{id:uid(),title:'بحث عن الطاقة المتجددة',type:'بحث',subject:'العلوم',due:addD(TD,-1),mins:90,pr:'عالية',done:false});
+ S.exams.push({id:uid(),subject:'العلوم',unit:'الوحدة الثالثة',date:addD(TD,4),time:'08:00',ready:1,note:''});
+ S.classes.push({id:uid(),subject:'الرياضيات',day:0,p:0,t:''});
+ const m=['ريم','سارة','لينا','نورة'].map(n=>({n}));
+ S.teams.push({id:uid(),code:'IRTIQA1',name:'ملصق الطاقة المتجددة',subject:'العلوم',due:addD(TD,9),desc:'تصميم ملصق عن مصادر الطاقة',instr:'ثلاثة أمثلة ومصادر',members:m,outs:['ملصق','تقرير'],tasks:[{id:uid(),title:'جمع المصادر',who:'سارة',due:addD(TD,-1),st:'قيد التنفيذ',note:''},{id:uid(),title:'كتابة التقرير',who:'لينا',due:addD(TD,4),st:'لم تبدأ',note:''}],files:[]});
+ save();R();toast('حُمّلت بيانات تجريبية للعرض فقط')}
+async function ocr(f,w){const set=m=>{w==='u'?UI.up=m:UI.mup=m;R()};try{const s=await claude.use('sample');if(!s)return set('قراءة الصور غير متاحة في هذا العرض. الصقي النص يدويًا.');const r=await s('انسخي كل النص الظاهر في هذه الصورة كما هو حرفيًا وبلغته، دون شرح أو إضافة. إن لم يوجد نص اكتبي: لا يوجد نص.',{images:[f],cache:false});const t=(r.text||'').trim();if(w==='u')UI.txt=t;else UI.mtxt=t;set('قُرئ النص من الصورة بالذكاء الاصطناعي وقد يحوي أخطاء؛ راجعيه وصحّحيه قبل المتابعة.')}catch(e){set('تعذّرت قراءة الصورة ('+((e&&e.code)||'خطأ')+'). جرّبي صورة أوضح أو الصقي النص.')}}
+const SAMPLE='الخلية هي الوحدة الأساسية في بناء الكائنات الحية. النواة هي مركز التحكم في الخلية وتحتوي على المادة الوراثية. الميتوكوندريا تنتج الطاقة اللازمة لنشاط الخلية. جدار الخلية يوجد في الخلايا النباتية ويمنح النبات الصلابة. البلاستيدات الخضراء تقوم بعملية البناء الضوئي داخل النبات. الغشاء الخلوي يتحكم في دخول المواد إلى الخلية وخروجها.';
+function onb(){return `<div class="card" style="max-width:520px;margin:24px auto"><div class="hero"><h1>مرحبًا بك في ارتقاء</h1><p>معكِ تنمو المعرفة، تزدهر الأحلام 🌱</p></div><h3>سجّلي بياناتك لنبدأ</h3><label>الاسم</label><input id="on" maxlength="40" autocomplete="given-name"><div class="row"><div class="f"><label>المرحلة الدراسية</label><select id="os"><option>ابتدائي</option><option selected>متوسط</option><option>ثانوي</option></select></div><div class="f"><label>الصف</label><select id="oc">${['الأول','الثاني','الثالث','الرابع','الخامس','السادس'].map(x=>`<option>${x}</option>`).join('')}</select></div></div><div class="row" style="margin-top:12px"><button class="b" data-a="reg">ابدئي</button><button class="s" data-a="demo">بيانات تجريبية</button></div></div>`}
+const EN={'الرئيسية':'Home','الخدمات':'Services','الإنجازات':'Progress','الإعدادات':'Settings','من أول درس، إلى أفضل إنجاز':'From the first lesson to your best achievement','من أول درس، إلى أفضل إنجاز.':'From the first lesson to your best achievement.','معكِ تنمو المعرفة، تزدهر الأحلام 🌱':'With you, knowledge grows and dreams bloom 🌱','مرحبًا بك في ارتقاء':'Welcome to IRTIQA','سجّلي بياناتك لنبدأ':'Register to get started','الاسم':'Name','المرحلة الدراسية':'School stage','الصف':'Grade','ابتدائي':'Primary','متوسط':'Intermediate','ثانوي':'Secondary','ابدئي':'Start','بيانات تجريبية':'Demo data','مهام اليوم':"Today's tasks",'مهام متأخرة':'Overdue tasks','إنجاز الأسبوع':'Weekly progress','خطوتك التالية':'Your next step','تم إنجازها ✓':'Done ✓','ماذا أنجزتِ اليوم؟':'What did you achieve today?','فريق':'Team','افهم':'Understand','ثبّت':'Reinforce','خطّتي':'My Plan','أتقن':'Master','افتحي فريق':'Open Team','افتحي افهم':'Open Understand','افتحي ثبّت':'Open Reinforce','افتحي خطّتي':'Open My Plan','افتحي أتقن':'Open Master','للمشاريع الجماعية: قسّمي المهام بعدالة وتابعي الإنجاز.':'Group projects: split tasks fairly and track progress.','لخّصي الدرس واحصلي على أسئلة وشرح مبسّط.':'Summarize lessons, get questions and simple explanations.','جداول مراجعة واختبارات قصيرة تكشف نقاط ضعفك.':'Review tables and short quizzes that reveal weak spots.','جدولك واختباراتك وواجباتك وتذكيراتك في مكان واحد.':'Your timetable, exams, homework and reminders in one place.','راجعي مشروعك وفق متطلباته قبل التسليم.':'Check your project against its requirements before submitting.','‹ كل الخدمات':'‹ All services','‹ كل الفرق':'‹ All teams','إنشاء فريق جديد':'Create new team','الانضمام إلى فريق':'Join a team','انضمام':'Join','رمز الفريق':'Team code','إنشاء المشروع':'Create project','اسم المشروع':'Project name','المادة':'Subject','موعد التسليم':'Due date','قسّمي المهام بذكاء':'Split tasks smartly','افحص اكتمال المشروع':'Check project completeness','اعتماد التوزيع':'Approve split','فرقي':'My teams','لوحة المتابعة':'Tracking board','المهمة':'Task','المسؤولة':'Owner','الموعد':'Date','الحالة':'Status','حذف':'Delete','📷 التقطي صورة':'📷 Take a photo','🖼️ ارفعي صورة':'🖼️ Upload image','ابدأ التحليل':'Start analysis','أدخلي درسًا تجريبيًا':'Insert sample lesson','مستوى التفصيل':'Detail level','ملخص الدرس':'Lesson summary','أسئلة الدرس':'Lesson questions','شرح مبسط':'Simple explanation','مراجعة سريعة':'Quick review','انقليها إلى «ثبّت»':'Send to Reinforce','حفظ في المادة':'Save to subject','نسخ':'Copy','طباعة':'Print','الاختبارات القصيرة':'Short quizzes','الجداول':'Tables','النتائج السابقة':'Past results','ابدئي الاختبار':'Start quiz','التالي':'Next','الجدول الدراسي':'Timetable','الاختبارات':'Exams','الواجبات والمشاريع':'Homework & projects','التقويم والتخطيط':'Calendar & planning','إضافة':'Add','إضافة حصة':'Add a class','الحصة':'Period','اليوم':'Day','الأحد':'Sunday','الاثنين':'Monday','الثلاثاء':'Tuesday','الأربعاء':'Wednesday','الخميس':'Thursday','الأولى':'1st','الثانية':'2nd','الثالثة':'3rd','الرابعة':'4th','الخامسة':'5th','السادسة':'6th','السابعة':'7th','إضافية 1':'Extra 1','إضافية 2':'Extra 2','بدون وقت':'no time','خطّطي أسبوعي':'Plan my week','اعتماد الجدول':'Approve schedule','متأخرة':'Overdue','ارفعي مشروعك':'Upload your project','افحصي المشروع':'Review project','ساعدني على التحسين':'Help me improve','حفظ':'Save','تطوري':'My progress','سجل النشاط':'Activity log','اسم الطالبة':'Student name','المرحلة الدراسية':'School stage','حذف كل بياناتي':'Delete all my data','تعديل':'Edit'};
+function applyLang(){const en=S.lang==='en';document.documentElement.dir=en?'ltr':'rtl';document.documentElement.lang=en?'en':'ar';const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(n.parentNode.tagName==='SCRIPT')continue;if(n.__o===undefined){if(!n.nodeValue.trim())continue;n.__o=n.nodeValue}const t=n.__o.trim();n.nodeValue=en&&EN[t]?n.__o.replace(t,EN[t]):n.__o}}
+const THEMES={bright:{n:'مشرق',p:'#00A3A1',p2:'#007C8C',l:'#E2D6FF',l2:'#F2ECFF',g1:'#00B8A9',g2:'#7C5CFF',bd:'#DCD2F3',bg:'#FAF8FF'},rose:{n:'وردي',p:'#D6336C',p2:'#A61E4D',l:'#FFD9E8',l2:'#FFF0F6',g1:'#FF6B9D',g2:'#C084FC',bd:'#F5CFE0',bg:'#FFF9FB'},ocean:{n:'أزرق',p:'#1C7ED6',p2:'#1864AB',l:'#D0EBFF',l2:'#EDF6FF',g1:'#22B8CF',g2:'#4263EB',bd:'#C8DDF2',bg:'#F8FBFF'},sun:{n:'برتقالي',p:'#E8590C',p2:'#C2410C',l:'#FFE8CC',l2:'#FFF4E6',g1:'#FF922B',g2:'#F03E7E',bd:'#F3DCC2',bg:'#FFFBF6'},green:{n:'أخضر',p:'#2F9E44',p2:'#237A34',l:'#D3F9D8',l2:'#EBFBEE',g1:'#51CF66',g2:'#20C997',bd:'#CDE8D2',bg:'#F8FDF9'}};
+function applyTheme(){const t=THEMES[S.theme]||THEMES.bright,r=document.documentElement.style;['p','p2','l','l2','bd','bg','g1','g2'].forEach(k=>r.setProperty('--'+k,t[k]));r.setProperty('--fs',S.fs||1)}
+let TM={left:1500,id:null};const mmss=s=>pad(Math.floor(s/60))+':'+pad(s%60);
+const CFM={deltask:'حذف هذه المهمة؟',delteam:'حذف الفريق وكل مهامه؟',delcls:'حذف هذه الحصة؟',delexam:'حذف هذا الاختبار؟',deltask2:'حذف هذه المهمة؟',dell:'حذف هذا الدرس؟',wipe:'سيُحذف كل شيء نهائيًا. متأكدة؟',approve:'هل تريدين إضافة موعد التسليم النهائي إلى «خطّتي»؟'};
+let CF=false;window.confirm=()=>CF;
+function askThen(act,e){const ap=act==='approve',m=document.createElement('div');m.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.4);display:grid;place-items:center;z-index:20;padding:16px';m.innerHTML=`<div class="card" role="dialog" aria-modal="true" style="max-width:360px"><p style="margin:0 0 12px;font-weight:700">${CFM[act]}</p><div class="row"><button class="${ap?'b':'d'}" id="cy" style="padding:9px 16px">${ap?'نعم، أضيفيه':'نعم، احذفي'}</button><button class="s" id="cn">${ap?'لا، اعتمدي فقط':'إلغاء'}</button></div></div>`;document.body.appendChild(m);const run=y=>{m.remove();CF=y;try{A[act](e)}finally{CF=false}};m.querySelector('#cy').onclick=()=>run(true);m.querySelector('#cn').onclick=()=>{if(ap)run(false);else m.remove()};m.querySelector('#cy').focus()}
+const A={
+fs:e=>{S.fs=parseFloat(e.dataset.v);save();R()},
+theme:e=>{S.theme=e.dataset.v;save();R()},
+tstart:()=>{if(TM.id)return;TM.id=setInterval(()=>{TM.left--;const e=$('#tm');if(e)e.textContent=mmss(TM.left);if(TM.left<=0){clearInterval(TM.id);TM.id=null;TM.left=1500;S.focus=(S.focus||0)+1;log('أنهيتُ جلسة تركيز 25 دقيقة');save();toast('أحسنتِ! جلسة تركيز مكتملة 🎉');if(V==='home')R()}},1000)},
+tpause:()=>{clearInterval(TM.id);TM.id=null},
+treset:()=>{clearInterval(TM.id);TM.id=null;TM.left=1500;const e=$('#tm');if(e)e.textContent=mmss(1500)},
+go:e=>go(e.dataset.v),
+demo,
+show:e=>{UI[e.dataset.k]=!UI[e.dataset.k];R()},
+join:()=>{const c=val('jc').trim().toUpperCase();if(!need(c,'أدخلي رمز الفريق'))return;const t=S.teams.find(x=>x.code===c);if(!t)return toast('لا يوجد فريق بهذا الرمز على هذا الجهاز. المشاركة بين الأجهزة تحتاج خادمًا.');if(t.members.some(m=>m.n===S.name))return toast('أنتِ عضوة في هذا الفريق بالفعل');t.members.push({n:S.name,r:''});log('انضممتُ إلى «'+t.name+'»');save();UI={};sub.team=t.id;R();toast('تم الانضمام إلى الفريق')},
+mkteam:()=>{const n=val('tn').trim(),d=val('td'),ms=val('tm').split('\n').map(s=>s.trim()).filter(Boolean).map(s=>{const p=s.split('-');return{n:p[0].trim(),r:(p[1]||'').trim()}});
+ if(!need(!S.teams.some(x=>x.code===val('tcode').trim().toUpperCase()),'هذا الرمز مستخدم، اختاري رمزًا آخر')||!need(n,'اكتبي اسم المشروع')||!need(d,'اختاري موعد التسليم')||!need(ms.length>=2,'أضيفي عضوتين على الأقل (اسم في كل سطر)'))return;
+ S.teams.push({id:uid(),code:val('tcode').trim().toUpperCase()||genCode(),name:n,subject:val('ts'),due:d,desc:val('tdesc'),instr:val('ti'),members:ms,outs:val('to').split(/[,،]/).map(s=>s.trim()).filter(Boolean),tasks:[],files:[]});
+ log('أنشأتُ مشروع «'+n+'»');save();UI={};R();toast('تم إنشاء المشروع')},
+opent:e=>{sub.team=e.dataset.id;R()},clr:()=>{sub.team=0;UI={};R()},
+split:e=>{const t=S.teams.find(x=>x.id===e.dataset.id),ts=['جمع المصادر والمعلومات','تحديد هيكل المشروع',...t.outs.map(o=>'إعداد: '+o),'مراجعة المحتوى وتنسيقه','المراجعة النهائية والتسليم'],load={};t.members.forEach(m=>load[m.n]=0);
+ const span=Math.max(dd(t.due,TD),ts.length);
+ t.prop=ts.map((x,i)=>{const pref=t.members.find(m=>m.r&&x.includes(m.r)&&load[m.n]<=Math.min(...Object.values(load))+1),m=pref||t.members.slice().sort((a,b)=>load[a.n]-load[b.n])[0];load[m.n]++;return{id:uid(),title:x,who:m.n,due:addD(TD,Math.min(Math.floor((i+1)*span/ts.length),span)),dep:i>1?ts[i>=ts.length-1?ts.length-2:1]:i===1?ts[0]:''}});
+ R();toast('هذا اقتراح تجريبي بقواعد محلية؛ راجعيه ثم اعتمديه')},
+approve:e=>{const t=S.teams.find(x=>x.id===e.dataset.id);t.tasks=t.tasks.concat(t.prop.map(p=>({...p,st:'لم تبدأ',note:''})));t.prop=null;
+ if(confirm('هل تريدين إضافة موعد التسليم النهائي إلى «خطّتي»؟'))S.tasks.push({id:uid(),title:'تسليم مشروع '+t.name,type:'مشروع',subject:t.subject,due:t.due,mins:30,pr:'عالية',done:false});
+ log('اعتمدتُ توزيع مهام «'+t.name+'»');save();R();toast('تم اعتماد التوزيع')},
+dismiss:e=>{S.teams.find(x=>x.id===e.dataset.id).prop=null;R()},
+chk:e=>{const t=S.teams.find(x=>x.id===e.dataset.id),lt=t.tasks.filter(x=>stOf(x)==='متأخرة'),un=t.tasks.filter(x=>x.st==='لم تبدأ'),out=t.outs.filter(o=>!t.tasks.some(x=>x.title.includes(o)));
+ UI.chk=!t.tasks.length?'<p>لا مهام لفحصها. قسّمي المهام أولًا.</p>':`<p>المهام المتأخرة: ${lt.length?lt.map(x=>esc(x.title)+' ('+esc(x.who)+')').join('، '):'لا يوجد'}</p><p>لم تبدأ: ${un.length}</p><p>مخرجات بلا مهمة: ${out.length?out.map(esc).join('، '):'لا يوجد'}</p>${lt.length?'<div class="note"><b>اقتراحات (لن يتغير شيء دون موافقتك):</b> مدّي موعد المهمة المتأخرة داخل الجدول، أو انقلي جزءًا منها لعضوة أقل حملًا، أو ادمجي مراجعتين في يوم واحد.</div>':'<p>✅ لا تأخر حاليًا.</p>'}`;R()},
+toMaster:e=>{const t=S.teams.find(x=>x.id===e.dataset.id);UI={mc:(t.instr?t.instr+'\n':'')+t.outs.join('\n'),mn:t.name};sub.team=0;V='master';R();toast('نُقلت المتطلبات إلى «أتقن»')},
+deltask:e=>{if(!confirm('حذف هذه المهمة؟'))return;const t=S.teams.find(x=>x.id===e.dataset.t);t.tasks=t.tasks.filter(x=>x.id!==e.dataset.id);save();R()},
+delteam:e=>{if(!confirm('حذف الفريق وكل مهامه؟'))return;S.teams=S.teams.filter(x=>x.id!==e.dataset.id);sub.team=0;save();R()},
+up:e=>{const f=e.files[0];if(!f)return;UI.txt=val('ut');UI.up='جارٍ قراءة النص من الصورة...';R();ocr(f,'u')},
+sample:()=>{UI.txt=SAMPLE;R()},
+analyze:()=>{const t=val('ut').trim();if(!need(t.length>=60,'الصقي نص درس لا يقل عن بضع جمل'))return;if(!need(parse(t).items.length>=2,'تعذّر استخراج جمل كافية؛ تأكدي أن النص جمل كاملة'))return;
+ UI.txt=t;UI.res={text:t,lv:val('ul'),subject:val('us'),grade:val('ug')};UI.tab=0;S.grade=val('ug')||S.grade;log('حلّلتُ درس '+val('us'));save();R();toast('تم التحليل (تجريبي محلي)')},
+tab:e=>{UI.tab=+e.dataset.i;R()},
+savel:()=>{const r=UI.res;S.lessons.push({id:uid(),subject:r.subject,title:r.text.slice(0,28)+'…',text:r.text});log('حفظتُ درس '+r.subject);save();toast('حُفظ الدرس في ملفك')},
+toFix:()=>{A.savel();UI={ft:0};V='fix';R();toast('نُقل الدرس إلى «ثبّت»')},
+copy:()=>{const t=($('#sumtxt')||{}).innerText||UI.res.text;try{navigator.clipboard.writeText(t).then(()=>toast('تم النسخ'),()=>toast('تعذّر النسخ'))}catch(e){toast('تعذّر النسخ')}},
+ft:e=>{UI.ft=+e.dataset.i;UI.q=null;R()},tl:e=>{UI.tl=+e.value;R()},
+startq:()=>{const l=S.lessons.find(x=>x.id===val('ql')),n=Math.min(60,Math.max(1,+val('qn')||10)),qs=makeQs(l,n,val('qd'));if(!need(qs.length,'الدرس قصير لتوليد أسئلة'))return;UI.q={l:l.id,qs,i:0,a:[],mode:val('qm'),lv:val('qd')}; R()},
+startai:async()=>{const l=S.lessons.find(x=>x.id===val('ql')),n=Math.min(40,Math.max(5,+val('qn')||10)),m=val('qm');toast('جارٍ توليد الأسئلة...');try{const s=await claude.use('sample');if(!s)return toast('الذكاء الاصطناعي غير متاح في هذا العرض');const r=await s.json('أنشئي '+n+' سؤال اختيار من متعدد تغطي كل أجزاء نص الدرس التالي من أوله إلى آخره بتنوع (فهم وتطبيق وتفكير) اعتمادًا على النص فقط دون اختلاق. أعيدي JSON فقط: مصفوفة عناصر {"q":نص السؤال,"o":[أربعة خيارات],"c":رقم الخيار الصحيح من 0 إلى 3,"k":المهارة أو المفهوم,"why":سبب الإجابة الصحيحة}. النص:\n'+l.text.slice(0,8000),{cache:false});const qs=(Array.isArray(r)?r:[]).filter(x=>x&&x.q&&Array.isArray(x.o)&&x.o.length>=2&&Number.isInteger(x.c)&&x.o[x.c]!==undefined);if(!qs.length)return toast('لم يصل توليد صالح، جرّبي مرة أخرى');UI.q={l:l.id,qs,i:0,a:[],mode:m,lv:'متوسط'};R()}catch(e){toast('تعذّر التوليد ('+((e&&e.code)||'خطأ')+')')}},
+ans:e=>{const q=UI.q;if(q.mode==='تدريب'&&q.a[q.i]!==undefined)return;q.a[q.i]=+e.dataset.j;R()},
+nextq:()=>{const q=UI.q;if(q.a[q.i]===undefined)return;if(q.i+1<q.qs.length)q.i++;else{q.done=1;const l=S.lessons.find(x=>x.id===q.l),sc=q.a.filter((a,i)=>a===q.qs[i].c).length,p=Math.round(sc/q.qs.length*100);S.results.unshift({d:TD,title:l?l.title:'',subject:l?l.subject:'',mode:q.mode,p,weak:q.qs.filter((x,i)=>q.a[i]!==x.c).map(x=>x.k)});log('أنهيتُ اختبارًا قصيرًا ('+p+'%)');save()}R()},
+retry:()=>{const q=UI.q,l=S.lessons.find(x=>x.id===q.l),w=q.qs.filter((x,i)=>q.a[i]!==x.c).map(x=>x.k),qs=makeQs(l,5,q.lv,w);UI.q={l:q.l,qs,i:0,a:[],mode:q.mode,lv:q.lv};R()},
+endq:()=>{UI.q=null;R()},
+copytb:()=>{try{navigator.clipboard.writeText($('#tb').innerText).then(()=>toast('تم النسخ'))}catch(e){toast('تعذّر النسخ')}},
+pt:e=>{UI.pt=+e.dataset.i;R()},
+editcls:e=>{const c=S.classes.find(x=>x.id===e.dataset.id);UI.edit=c.id;R();$('#cs').value=c.subject;$('#cd').value=c.day;$('#cp').value=c.p;$('#ct').value=c.t||'';$('#cs').scrollIntoView({block:'center'});toast('عدّلي ثم اضغطي «حفظ التعديل»')},
+addcls:()=>{const d=+val('cd'),p=+val('cp');if(UI.edit){S.classes=S.classes.filter(c=>c.id!==UI.edit);UI.edit=null}if(S.classes.some(c=>c.day==d&&c.p===p)){S.classes=S.classes.filter(c=>!(c.day==d&&c.p===p))}S.classes.push({id:uid(),subject:val('cs'),day:d,p,t:val('ct')});save();R();toast('أُضيفت الحصة')},
+delcls:e=>{if(!confirm('حذف الحصة؟'))return;S.classes=S.classes.filter(x=>x.id!==e.dataset.id);save();R()},
+addexam:()=>{if(!need(val('ed'),'اختاري تاريخ الاختبار'))return;S.exams.push({id:uid(),subject:val('es'),unit:val('eu'),date:val('ed'),time:val('et'),ready:+val('er'),note:val('en')});log('أضفتُ اختبار '+val('es'));save();R();toast('أُضيف الاختبار')},
+delexam:e=>{if(!confirm('حذف الاختبار؟'))return;S.exams=S.exams.filter(x=>x.id!==e.dataset.id);save();R()},
+addtask:()=>{if(!need(val('wt').trim(),'اكتبي اسم المهمة')||!need(val('wd'),'اختاري موعد التسليم'))return;S.tasks.push({id:uid(),title:val('wt'),type:val('wk'),subject:val('ws'),due:val('wd'),mins:+val('wm')||45,pr:val('wp'),desc:val('wx'),done:false});save();R();toast('أُضيفت المهمة')},
+done:e=>{const t=S.tasks.find(x=>x.id===e.dataset.id);t.done=true;log('أنجزتُ: '+t.title);save();R();toast('أحسنتِ! 🎉')},
+deltask2:e=>{if(!confirm('حذف المهمة؟'))return;S.tasks=S.tasks.filter(x=>x.id!==e.dataset.id);save();R()},
+mkplan:()=>{const busy={},free=[];
+ const need=[];S.exams.filter(e=>e.date>=TD).forEach(e=>need.push({t:'مذاكرة '+e.subject,by:e.date,n:e.ready===1?3:e.ready===2?2:1}));
+ S.tasks.filter(t=>!t.done).forEach(t=>need.push({t:t.title,by:t.due,n:Math.ceil(t.mins/45)}));
+ need.sort((a,b)=>a.by.localeCompare(b.by));const sl=['16:00','17:00','18:00','19:00'],used={},out=[];
+ need.forEach(x=>{let k=x.n;for(let i=0;i<7&&k>0;i++){const d=addD(TD,i);if(d>x.by)break;const wd=new Date(d+'T12:00').getDay();for(const s of sl){if(k<=0)break;const e2=pad(+s.slice(0,2)+1)+':00',key=wd+s+d;if(used[key]||(busy[wd]||[]).some(b=>s<b[1]&&e2>b[0]))continue;used[key]=1;out.push({day:wd,s,e:e2,t:x.t,ok:false,d});k--}}});
+ S.plan=out;if(!out.length)toast('لا مهام أو اختبارات تحتاج جلسات، أو لا يوجد وقت متاح');save();R()},
+okplan:()=>{S.plan.forEach(p=>p.ok=true);log('اعتمدتُ جدول المذاكرة');save();R()},noplan:()=>{S.plan=[];save();R()},
+mup:e=>{const f=e.files[0];if(!f)return;const x=f.name.split('.').pop().toLowerCase();if(x==='txt'){f.text().then(t=>{UI.mtxt=t;UI.mup='قُرئ الملف النصي.';R()});return}
+ if(f.type.startsWith('image/')){UI.mtxt=val('mt');UI.mup='جارٍ قراءة النص من الصورة...';R();ocr(f,'m');return}UI.mup='هذا النوع غير مدعوم. ارفعي صورة للمشروع أو الصقي النص.';R()},
+review:()=>{const t=val('mt').trim();UI.mtxt=t;UI.mn=val('mn');UI.mc=val('mc');if(!need(t.length>=30,'أدخلي نص المشروع أولًا (30 حرفًا على الأقل)'))return;UI.rep={name:val('mn'),F:check(t,val('mc')),ck:{}};UI.hp=null;log('راجعتُ مشروعًا في «أتقن»');save();R();toast('اكتملت المراجعة')},
+help:e=>{UI.hp=+e.dataset.id;R()},
+ck:e=>{UI.rep.ck[e.dataset.id]=e.checked;R()},
+saver:()=>{S.reports.unshift({name:UI.rep.name||'مشروعي',d:TD,F:UI.rep.F});save();toast('حُفظ التقرير')},
+saveteam:()=>{const t=S.teams.find(x=>x.id===val('rt'));t.files=t.files||[];t.files.push({n:'تقرير مراجعة: '+(UI.rep.name||'مشروع'),d:TD});save();toast('حُفظ ضمن ملفات المشروع')},
+saveset:()=>{S.name=val('sn').trim();S.grade=val('sg').trim();S.stage=val('sst');S.remind=$('#sr').checked;save();toast('تم الحفظ')},
+dell:e=>{if(!confirm('حذف الدرس؟'))return;S.lessons=S.lessons.filter(x=>x.id!==e.dataset.id);save();R()},
+lang:()=>{S.lang=S.lang==='en'?'ar':'en';save();R()},
+reg:()=>{const n=val('on').trim();if(!need(n.length>=2,'اكتبي اسمك للمتابعة'))return;S.name=n;S.stage=val('os');S.grade=val('oc');log('سجّلتُ في ارتقاء');save();R();toast('أهلًا '+n+' 🌱')},
+wipe:()=>{if(!confirm('سيُحذف كل شيء نهائيًا. متأكدة؟'))return;try{localStorage.removeItem(K)}catch(e){}location.reload()}};
+document.addEventListener('click',ev=>{const e=ev.target.closest('[data-a]');if(!e||e.tagName==='INPUT'&&e.type!=='checkbox')return;if(e.tagName==='A')ev.preventDefault();if(e.tagName==='SELECT')return;CFM[e.dataset.a]?askThen(e.dataset.a,e):A[e.dataset.a]&&A[e.dataset.a](e)});
+document.addEventListener('keydown',ev=>{if(ev.key==='Enter'&&ev.target.classList.contains('svc'))ev.target.click()});
+document.addEventListener('change',ev=>{const e=ev.target;
+ if(e.matches('input[type=file][data-a]'))return A[e.dataset.a](e);
+ if(e.dataset.a==='tl')return A.tl(e);
+ if(e.dataset.pi!==undefined){const t=S.teams.find(x=>x.prop);t.prop[+e.dataset.pi][e.dataset.f]=e.value;return}
+ if(e.dataset.tt){const t=S.teams.find(x=>x.id===e.dataset.tt),x=t.tasks.find(y=>y.id===e.dataset.id);if(e.dataset.f==='file'){if(e.files[0]){x.file=e.files[0].name;t.files=t.files||[];t.files.push({n:e.files[0].name,d:TD});toast('سُجّل اسم الملف (لا يُرفع لخادم في هذا النموذج)')}}else{x[e.dataset.f]=e.value;if(e.dataset.f==='st'&&e.value==='مكتملة')log('أُنجزت مهمة فريق: '+x.title)}save();R()}});
+R();
+</script></body></html>
